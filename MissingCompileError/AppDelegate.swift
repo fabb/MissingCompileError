@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  MissingCompileError
-//
-//  Created by Fabian Ehrentraud on 07.05.15.
-//  Copyright (c) 2015 my.org. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain

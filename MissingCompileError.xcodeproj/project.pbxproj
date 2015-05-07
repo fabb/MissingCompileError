@@ -13,6 +13,9 @@
 		1F41F1341AFBC122009E2AAD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F41F1331AFBC122009E2AAD /* Images.xcassets */; };
 		1F41F1371AFBC122009E2AAD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F41F1351AFBC122009E2AAD /* LaunchScreen.xib */; };
 		1F41F1431AFBC122009E2AAD /* MissingCompileErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F41F1421AFBC122009E2AAD /* MissingCompileErrorTests.swift */; };
+		1F41F14D1AFBC160009E2AAD /* SomeSwiftClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F41F14C1AFBC160009E2AAD /* SomeSwiftClass.swift */; };
+		1F41F1511AFBC180009E2AAD /* SomeObjectiveCClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F41F1501AFBC180009E2AAD /* SomeObjectiveCClass.m */; };
+		1F41F1531AFBC2B7009E2AAD /* SomeSwiftClassThatIsNSObjectSubclass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F41F1521AFBC2B7009E2AAD /* SomeSwiftClassThatIsNSObjectSubclass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,11 @@
 		1F41F13C1AFBC122009E2AAD /* MissingCompileErrorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MissingCompileErrorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F41F1411AFBC122009E2AAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F41F1421AFBC122009E2AAD /* MissingCompileErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingCompileErrorTests.swift; sourceTree = "<group>"; };
+		1F41F14C1AFBC160009E2AAD /* SomeSwiftClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SomeSwiftClass.swift; sourceTree = "<group>"; };
+		1F41F14E1AFBC17F009E2AAD /* MissingCompileError-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MissingCompileError-Bridging-Header.h"; sourceTree = "<group>"; };
+		1F41F14F1AFBC180009E2AAD /* SomeObjectiveCClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SomeObjectiveCClass.h; sourceTree = "<group>"; };
+		1F41F1501AFBC180009E2AAD /* SomeObjectiveCClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SomeObjectiveCClass.m; sourceTree = "<group>"; };
+		1F41F1521AFBC2B7009E2AAD /* SomeSwiftClassThatIsNSObjectSubclass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SomeSwiftClassThatIsNSObjectSubclass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,11 @@
 				1F41F1331AFBC122009E2AAD /* Images.xcassets */,
 				1F41F1351AFBC122009E2AAD /* LaunchScreen.xib */,
 				1F41F12A1AFBC122009E2AAD /* Supporting Files */,
+				1F41F14C1AFBC160009E2AAD /* SomeSwiftClass.swift */,
+				1F41F14F1AFBC180009E2AAD /* SomeObjectiveCClass.h */,
+				1F41F1501AFBC180009E2AAD /* SomeObjectiveCClass.m */,
+				1F41F14E1AFBC17F009E2AAD /* MissingCompileError-Bridging-Header.h */,
+				1F41F1521AFBC2B7009E2AAD /* SomeSwiftClassThatIsNSObjectSubclass.swift */,
 			);
 			path = MissingCompileError;
 			sourceTree = "<group>";
@@ -212,7 +225,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F41F1511AFBC180009E2AAD /* SomeObjectiveCClass.m in Sources */,
+				1F41F1531AFBC2B7009E2AAD /* SomeSwiftClassThatIsNSObjectSubclass.swift in Sources */,
 				1F41F12F1AFBC122009E2AAD /* ViewController.swift in Sources */,
+				1F41F14D1AFBC160009E2AAD /* SomeSwiftClass.swift in Sources */,
 				1F41F12D1AFBC122009E2AAD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,9 +358,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MissingCompileError/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MissingCompileError/MissingCompileError-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -352,9 +371,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MissingCompileError/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MissingCompileError/MissingCompileError-Bridging-Header.h";
 			};
 			name = Release;
 		};
